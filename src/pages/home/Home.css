@@ -9,3 +9,34 @@
     display: block;
     margin: 0 auto;
 }
+.navbar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+.footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+  }
+  
+  
+  .footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+  }
+  
+  .footer p {
+    margin: 0;
+  }
+  
