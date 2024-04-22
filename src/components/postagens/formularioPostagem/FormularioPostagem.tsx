@@ -139,11 +139,11 @@ function FormularioPostagem() {
   const carregandoTema = tema.descricao === '';
 
   return (
-    <div className="container flex flex-col mx-auto items-center">
-      <h1 className="text-4xl text-center my-8">{id !== undefined ? 'Editar Postagem' : 'Cadastrar Postagem'}</h1>
+    <div className="container flex flex-col mx-auto items-center bg-orange-100 " style={{ fontFamily: 'Comic Sans MS'}}>
+      <h1 className="text-4xl text-center my-8 text-orange-500">{id !== undefined ? 'Editar Postagem' : 'Cadastrar Postagem'}</h1>
 
       <form onSubmit={gerarNovaPostagem} className="flex flex-col w-1/2 gap-4">
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-2 text-orange-500">
           <label htmlFor="titulo">Titulo da postagem</label>
           <input
             value={postagem.titulo}
@@ -152,10 +152,10 @@ function FormularioPostagem() {
             placeholder="Titulo"
             name="titulo"
             required
-            className="border-2 border-slate-700 rounded p-2"
+            className="border-2 border-orange-500 rounded p-2"
           />
         </div>
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-2 text-orange-500">
           <label htmlFor="titulo">Texto da postagem</label>
           <input
             value={postagem.texto}
@@ -164,12 +164,12 @@ function FormularioPostagem() {
             placeholder="Texto"
             name="texto"
             required
-            className="border-2 border-slate-700 rounded p-2"
+            className="border-2 border-orange-500 rounded p-2 text-orange-500"
           />
         </div>
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-2 text-orange-500">
           <p>Tema da postagem</p>
-          <select name="tema" id="tema" className='border p-2 border-slate-800 rounded' onChange={(e) => buscarTemaPorId(e.currentTarget.value)}>
+          <select name="tema" id="tema" className='border p-2 border-orange-500 rounded' onChange={(e) => buscarTemaPorId(e.currentTarget.value)}>
             <option value="" selected disabled>Selecione um tema</option>
             {temas.map((tema) => (
               <>
@@ -178,7 +178,7 @@ function FormularioPostagem() {
             ))}
           </select>
         </div>
-        <button disabled={carregandoTema} type='submit' className='rounded disabled:bg-slate-200 bg-indigo-400 hover:bg-indigo-800 text-white font-bold w-1/2 mx-auto block py-2'>
+        <button disabled={carregandoTema} type='submit' className='rounded disabled:bg-slate-200 bg-orange-500 hover:bg-orange-400 text-white font-bold w-1/2 mx-auto block py-2'>
           {carregandoTema ? <span>Carregando</span> : id !== undefined ? 'Editar' : 'Cadastrar'}
         </button>
       </form>
